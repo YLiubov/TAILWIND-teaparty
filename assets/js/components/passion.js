@@ -1,31 +1,51 @@
-import { create } from "../utils/create.js"
-import { set } from "../utils/set.js"
+import { create } from "../utils/create.js";
+import { set } from "../utils/set.js";
 
 export function passion() {
+  const section = create("section");
 
-  const section = create("section")
-  section.className =
-    "py-5 px-6 text-center"
+  // фон как в макете + отступы
+  section.className = "bg-[#F1F3E2] py-10";
 
-  const title = create("h2")
-  title.textContent = "Passion and pride"
-  title.className =
-    "text-[#b4b36a] text-4xl font-customGoogle m-6"
+  // контейнер: на мобилке колонка, на desktop две колонки
+  const wrap = create("div");
+  wrap.className =
+    "px-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10 items-start";
 
-  const text1 = create("p")
-  text1.textContent = "Working in the world of tea are what drive our constant evolution, and what we allowed so to offer the framework of service and care that this highly appreciated product with over 2,000 years of history deserves."
-  text1.className = "text-gray-600 text-justify mb-4"
+  // -------- LEFT (TEXT) --------
+  const left = create("div");
 
-  const text2 = create("p")
-  text2.textContent = "Since 1900 our knowledge and experience has been geared to the quality of our products, which we treat with respect and meticulousness."
-  text2.className = "text-gray-600 text-justify mb-4"
+  const title = create("h2");
+  title.textContent = "Passion and pride";
+  title.className = "font-customGoogle text-6xl text-[#b4b36a]";
 
-  const icon = create("img")
-  icon.src = "./assets/img/icon-tea.png"
-  icon.alt = "Tea icon"
-  icon.className = "w-3/4 mx-auto"
+  const p1 = create("p");
+  p1.textContent =
+    "Working in the world of tea are what drive our constant evolution, and what have allowed us to offer the framework of service and care that this highly appreciated product with over 2,000 years of history deserves.";
+  p1.className = "mt-4 text-[#4b4b4b] leading-relaxed";
 
-  set([title, text1, text2, icon], section)
+  const p2 = create("p");
+  p2.textContent =
+    "Since 1990 our knowledge and experience has been geared to the quality of our products, which we treat with respect and meticulousness.";
+  p2.className = "mt-4 text-[#4b4b4b] leading-relaxed";
 
-  return section
+  set([title, p1, p2], left);
+
+  // -------- RIGHT (ICON) --------
+  const right = create("div");
+  right.className = "mt-8 md:mt-0 flex md:justify-center";
+
+  const icon = create("img");
+  icon.src = "./assets/img/icon-tea.png"; // твой png
+  icon.alt = "Tea icon";
+  // модификатор брейкпоинта (media query), означающий min-width
+  icon.className = "md:w-90";
+
+  set(icon, right);
+
+  // собираем две колонки
+  set([left, right], wrap);
+  set(wrap, section);
+
+  return section;
 }
