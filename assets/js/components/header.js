@@ -48,7 +48,7 @@ export function header() {
   // BAR (коричневая полоска)
   const bar = create("div")
   bar.className =
-    "relative z-50 h-12 bg-[#6b4a33] flex items-center justify-end md:justify-center px-4 shadow-xl"
+    "relative z-50 h-12 bg-[#6b4a33] flex items-center justify-end md:justify-end px-4 shadow-xl"
 
   // DESKTOP NAV (видно только на md+)
   const navDesktop = create("nav")

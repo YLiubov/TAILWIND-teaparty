@@ -11,7 +11,6 @@ export function about() {
 
 
   // SECTION TITLE
-
   const h2 = create("h2")
   h2.textContent = "About us"
 
@@ -22,7 +21,6 @@ export function about() {
 
 
   // GRID CONTAINER
-
   const list = create("div")
 
   // grid layout
