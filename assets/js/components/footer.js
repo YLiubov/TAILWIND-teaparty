@@ -65,6 +65,7 @@ export function footer() {
   // RIGHT: form
   // -------------------------
   const right = create("div")
+  right.className = "md:mt-14"
 
   const form = create("form")
   form.className = "flex flex-col gap-4"
