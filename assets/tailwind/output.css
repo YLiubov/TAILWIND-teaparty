@@ -281,8 +281,17 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
   .h-50 {
     height: calc(var(--spacing) * 50);
+  }
+  .h-60 {
+    height: calc(var(--spacing) * 60);
   }
   .h-\[230px\] {
     height: 230px;
@@ -445,6 +454,18 @@
   .bg-\[url\(\'\'\)\] {
     background-image: url('');
   }
+  .bg-\[url\(\'\.\.\/img\/\.jpg\'\)\] {
+    background-image: url('../img/.jpg');
+  }
+  .bg-\[url\(\'\.\.\/img\/Fo\.jpg\'\)\] {
+    background-image: url('../img/Fo.jpg');
+  }
+  .bg-\[url\(\'\.\.\/img\/Form-Base\.jpg\'\)\] {
+    background-image: url('../img/Form-Base.jpg');
+  }
+  .bg-\[url\(\'\.\.\/img\/Form\.jpg\'\)\] {
+    background-image: url('../img/Form.jpg');
+  }
   .bg-\[url\(\'\.\.\/img\/Image-Hero-Front\.jpg\'\)\] {
     background-image: url('../img/Image-Hero-Front.jpg');
   }
@@ -502,6 +523,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
@@ -522,6 +546,9 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
   }
   .font-customGoogle {
     font-family: var(--font-customGoogle);
@@ -589,6 +616,12 @@
   }
   .text-\[\#d39a7d\] {
     color: #d39a7d;
+  }
+  .text-\[\#d39a7d\]\/80 {
+    color: color-mix(in oklab, #d39a7d 80%, transparent);
+  }
+  .text-\[\#d39a7d\]\/90 {
+    color: color-mix(in oklab, #d39a7d 90%, transparent);
   }
   .text-\[\#ffd6d6\] {
     color: #ffd6d6;
@@ -737,6 +770,11 @@
   .lg\:h-30 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 30);
+    }
+  }
+  .lg\:h-60 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 60);
     }
   }
   .lg\:grid-cols-3 {
