@@ -5,6 +5,7 @@ import { set } from './utils/set.js'
 import { header } from "./components/header.js"
 import { passion } from "./components/passion.js"
 import { about } from "./components/about.js";
+import { footer } from "./components/footer.js";
 
 const root = get("#root")
 
@@ -15,4 +16,4 @@ page.className = "max-w-5xl mx-auto";
 // 2) складываем секции внутрь page
 set([passion(), about()], page);
 
-set([header(), page], root)
+set([header(), page, footer()], root)

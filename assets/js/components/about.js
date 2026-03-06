@@ -102,7 +102,7 @@ function createCard(imgSrc, titleText, subText) {
   // mobile → всегда тёмное
   // desktop hover → затемнение исчезает
   overlay.className =
-    "absolute inset-0 bg-black/40 opacity-100 transition-opacity duration-300 md:group-hover:opacity-0"
+    "absolute inset-0 bg-black/50 opacity-100 transition-opacity duration-300 md:group-hover:opacity-0"
 
 
 

@@ -6,7 +6,7 @@ export function header() {
 
   // HERO (картинка + заголовок)
   const hero = create("div")
-  hero.className = "relative" // важно: чтобы меню позиционировалось внутри hero
+  hero.className = "relative " // важно: чтобы меню позиционировалось внутри hero
 
   const img = create("img")
   img.src = "./assets/img/Image-Hero-Front.jpg"
@@ -48,7 +48,7 @@ export function header() {
   // BAR (коричневая полоска)
   const bar = create("div")
   bar.className =
-    "relative z-50 h-12 bg-[#6b4a33] flex items-center justify-end md:justify-center px-4 shadow-none md:shadow-xl"
+    "relative z-50 h-12 bg-[#6b4a33] flex items-center justify-end md:justify-center px-4 shadow-xl"
 
   // DESKTOP NAV (видно только на md+)
   const navDesktop = create("nav")
@@ -116,6 +116,6 @@ function navLink(text, href) {
   const a = document.createElement("a")
   a.textContent = text
   a.href = href
-  a.className = "hover:opacity-90"
+  a.className = "hover:opacity-60"
   return a
 }
