@@ -29,7 +29,7 @@ export function header() {
 
   const mobileList = create("div")
   mobileList.className =
-    "h-full flex flex-col justify-center gap-6 px-6 text-[#b4b36a] font-semibold text-xl"
+    "h-full flex flex-col justify-center gap-6 text-[#b4b36a] font-semibold text-xl pl-4"
 
   set(
     [

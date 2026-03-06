@@ -21,7 +21,6 @@
 
   body {
     @apply bg-[#bdbb9b] text-[rgb(var(--brand-dark))] antialiased;
-    font-family: ui-serif, Georgia, "Times New Roman", serif;
   }
 
   a {
